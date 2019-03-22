@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>forum-subforum</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#DCDFE4" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="forum-subforum" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#000000" x="8" y="8" width="8" height="1"></rect>
+        <rect id="Rectangle" fill="#000000" x="8" y="11" width="16" height="1"></rect>
+        <rect id="Rectangle" fill="#000000" x="8" y="14" width="16" height="1"></rect>
+        <rect id="Rectangle" fill="#000000" x="8" y="17" width="8" height="1"></rect>
+        <rect id="Rectangle" fill="#000000" x="8" y="20" width="6.5" height="1"></rect>
+        <rect id="Rectangle" fill="#000000" x="8" y="23" width="6.5" height="1"></rect>
+        <circle id="background" fill="url(#linearGradient-1)" cx="23" cy="23" r="5.5"></circle>
+        <path d="M23,28 C25.7614237,28 28,25.7614237 28,23 C28,20.2385763 25.7614237,18 23,18 C20.2385763,18 18,20.2385763 18,23 C18,25.7614237 20.2385763,28 23,28 Z M23,29.5 C19.4101491,29.5 16.5,26.5898509 16.5,23 C16.5,19.4101491 19.4101491,16.5 23,16.5 C26.5898509,16.5 29.5,19.4101491 29.5,23 C29.5,26.5898509 26.5898509,29.5 23,29.5 Z" id="inner-border" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M23,29 C26.3137085,29 29,26.3137085 29,23 C29,19.6862915 26.3137085,17 23,17 C19.6862915,17 17,19.6862915 17,23 C17,26.3137085 19.6862915,29 23,29 Z M23,30 C19.1340068,30 16,26.8659932 16,23 C16,19.1340068 19.1340068,16 23,16 C26.8659932,16 30,19.1340068 30,23 C30,26.8659932 26.8659932,30 23,30 Z" id="outer-border" fill="#000000" fill-rule="nonzero"></path>
+        <rect id="Rectangle" fill="#000000" x="20" y="20.5" width="3" height="1"></rect>
+        <rect id="Rectangle" fill="#000000" x="20" y="22.5" width="6" height="1"></rect>
+        <rect id="Rectangle" fill="#000000" x="20" y="24.5" width="6" height="1"></rect>
+    </g>
+</svg>

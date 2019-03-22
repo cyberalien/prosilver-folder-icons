@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>forum-locked</title>
+    <desc>Created with Sketch.</desc>
+    <g id="forum-locked" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M20,15 L22,15 C22.55,15 23,15.45 23,16 L23,23 C23,23.55 22.55,24 22,24 L10,24 C9.45,24 9,23.55 9,23 L9,16 C9,15.45 9.45,15 10,15 L12,15 L12,12 C12,9.79 13.79,8 16,8 C18.21,8 20,9.79 20,12 L20,15 Z M18,15 L18,12 C18,10.9 17.1,10 16,10 C14.9,10 14,10.9 14,12 L14,15 L18,15 Z M17,22 L16.64,19.85 C17.15,19.61 17.5,19.1 17.5,18.5 C17.5,17.67 16.83,17 16,17 C15.17,17 14.5,17.67 14.5,18.5 C14.5,19.1 14.85,19.61 15.36,19.85 L15,22 L17,22 Z" id="Icon-Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>
