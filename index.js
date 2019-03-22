@@ -58,10 +58,11 @@ tools.ImportDir(sourceDir, {
 
 }).then(res => {
 
-    // Export SVG
-    tools.ExportDir(collection, targetSVGDir);
+    // Export SVG for testing. SVG icons are not used, see js file in "output"
+    return tools.ExportDir(collection, targetSVGDir);
 
 }).then(res => {
+
     // Get all icons, split into <defs> and everything else
     let icons = {};
     collection.keys().forEach(key => {
