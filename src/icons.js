@@ -90,19 +90,12 @@
     }
 
     function generateTopicIcon(topicType, parts) {
-        var types = [topicType],
+        var types = [],
             read = true,
             locked = false,
+            hot = false,
             mine = false,
             layers;
-
-        if (topicType === 'global') {
-            types.push('announcement');
-        }
-        if (topicType !== 'topic') {
-            types.push('topic');
-        }
-        types.push('forum');
 
         parts.forEach(function(part) {
             switch (part) {
@@ -117,8 +110,21 @@
 
                 case 'locked':
                     locked = true;
+                    break;
+
+                case 'hot':
+                    hot = true;
             }
         });
+
+        types.push(topicType);
+        if (topicType === 'global') {
+            types.push('announcement');
+        }
+        if (topicType !== 'topic') {
+            types.push('topic');
+        }
+        types.push('forum');
 
         layers = [{
             layer: 'background',
