@@ -90,10 +90,19 @@
     }
 
     function generateTopicIcon(topicType, parts) {
-        var read = true,
+        var types = [topicType],
+            read = true,
             locked = false,
             mine = false,
             layers;
+
+        if (topicType === 'global') {
+            types.push('announcement');
+        }
+        if (topicType !== 'topic') {
+            types.push('topic');
+        }
+        types.push('forum');
 
         parts.forEach(function(part) {
             switch (part) {
@@ -113,23 +122,23 @@
 
         layers = [{
             layer: 'background',
-            icon: [topicType + '-background', 'topic-background', 'forum-background']
+            icon: types.map(function(type) { return type + '-background'; })
         }, {
             layer: 'content',
-            icon: [topicType, 'topic']
+            icon: types
         }];
 
         if (locked) {
             layers.push({
                 layer: 'locked',
-                icon: [topicType + '-locked', 'topic-locked']
+                icon: types.map(function(type) { return type + '-locked'; })
             });
         }
 
         if (mine) {
             layers.push({
                 layer: 'mine',
-                icon: [topicType + '-mine', 'topic-mine']
+                icon: types.map(function(type) { return type + '-mine'; })
             });
         }
 
