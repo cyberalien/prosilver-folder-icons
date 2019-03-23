@@ -32,17 +32,6 @@ tools.ImportDir(sourceDir, {
 
     let keys = collection.keys();
 
-    // Make sure all files are present
-    ['forum-background']. // background
-        concat(forumTypes). // main icon for all forum types
-        concat(['topic']). // + main topic icon
-        concat(topicModifiers.map(mod => 'topic-' + mod)). // topic modifiers
-        forEach(key => {
-        if (keys.indexOf(key) === -1) {
-            throw new Error('Missing required image: ' + key);
-        }
-    });
-
     // Remove icons that start with "-"
     keys.forEach(key => {
         if (key.slice(0, 1) === '-') {

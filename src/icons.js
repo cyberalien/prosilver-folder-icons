@@ -4,25 +4,37 @@
 (function() {
     var data = {/*replace*/},
         oldIconExists = Iconify.iconExists,
-        generated = {};
+        generated = {},
+        topicMods = ['unread', 'hot', 'moved', 'mine', 'locked'];
 
     /**
      * Mix layers
      *
+     * @param {Array} types
      * @param {Array} layers
      * @return {{body: string, width: number, height: number}}
      */
-    function mix(layers) {
+    function mix(types, layers) {
         var defs = '',
             body = '';
 
-        layers.forEach(function(item) {
+        layers.forEach(function(layer) {
             var row = false,
-                i;
+                key, i, j;
 
-            for (i = 0; i < item.icon.length; i++) {
-                if (data[item.icon[i]] !== void 0) {
-                    row = data[item.icon[i]];
+            for (i = 0; i < types.length; i++) {
+                key = types[i] + '-' + layer;
+                // Check for flag-specific layer: topic-content-locked
+                for (j = 0; j < layers.length; j++) {
+                    if (data[key + '-' + layers[j]] !== void 0) {
+                        row = data[key + '-' + layers[j]];
+                        break;
+                    }
+                }
+
+                // Check for default layer: topic-content
+                if (row === false && data[key] !== void 0) {
+                    row = data[key];
                     break;
                 }
             }
@@ -33,7 +45,7 @@
             }
 
             // Add body
-            body += '<g class="layer-' + item.layer + '">' + (typeof row === 'string' ? row : row.body) + '</g>';
+            body += '<g class="layer-' + layer + '">' + (typeof row === 'string' ? row : row.body) + '</g>';
 
             // Add defs
             if (typeof row === 'object' && row.defs !== void 0) {
@@ -80,40 +92,17 @@
             }
         });
 
-        return mix([{
-            layer: 'background',
-            icon: [forumType + '-background', 'forum-background']
-        }, {
-            layer: 'content',
-            icon: [forumType, 'forum']
-        }]);
+        return mix([forumType, 'forum'], ['background', 'content', 'overlay']);
     }
 
     function generateTopicIcon(topicType, parts) {
         var types = [],
-            read = true,
-            locked = false,
-            hot = false,
-            mine = false,
-            layers;
+            mods = {},
+            layers = ['background', 'content', 'overlay'];
 
         parts.forEach(function(part) {
-            switch (part) {
-                // Status
-                case 'unread':
-                    read = false;
-                    break;
-
-                case 'mine':
-                    mine = true;
-                    break;
-
-                case 'locked':
-                    locked = true;
-                    break;
-
-                case 'hot':
-                    hot = true;
+            if (topicMods.indexOf(part) !== -1) {
+                mods[part] = true;
             }
         });
 
@@ -126,29 +115,9 @@
         }
         types.push('forum');
 
-        layers = [{
-            layer: 'background',
-            icon: types.map(function(type) { return type + '-background'; })
-        }, {
-            layer: 'content',
-            icon: types
-        }];
+        layers = layers.concat(Object.keys(mods));
 
-        if (locked) {
-            layers.push({
-                layer: 'locked',
-                icon: types.map(function(type) { return type + '-locked'; })
-            });
-        }
-
-        if (mine) {
-            layers.push({
-                layer: 'mine',
-                icon: types.map(function(type) { return type + '-mine'; })
-            });
-        }
-
-        return mix(layers);
+        return mix(types, layers);
     }
 
     function generateIcon(name) {
@@ -161,6 +130,8 @@
             return generateTopicIcon(type, parts);
         }
     }
+
+    // Layers to skip: edit this list
 
     Iconify.iconExists = function(icon, prefix) {
         if (prefix !== 'phpbb-forum') {
