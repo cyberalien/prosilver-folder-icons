@@ -89,23 +89,14 @@
         }]);
     }
 
-    function generateTopicIcon(type, parts) {
-        var topicType = 'topic',
-            read = true,
+    function generateTopicIcon(topicType, parts) {
+        var read = true,
             locked = false,
             mine = false,
             layers;
 
         parts.forEach(function(part) {
             switch (part) {
-                // Icon types
-                case 'announcement':
-                case 'sticky':
-                case 'pm':
-                case 'global':
-                    topicType = part;
-                    break;
-
                 // Status
                 case 'unread':
                     read = false;
