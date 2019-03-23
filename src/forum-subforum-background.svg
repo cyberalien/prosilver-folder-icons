@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>forum-subforum-background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#DCDFE4" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="forum-subforum-background" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,31 C7.71572875,31 1,24.2842712 1,16 C1,7.71572875 7.71572875,1 16,1 C24.2842712,1 31,7.71572875 31,16 C31,24.2842712 24.2842712,31 16,31 Z" id="outer-line" fill="#000000" fill-rule="nonzero"></path>
+        <path d="M16,30 C23.7319865,30 30,23.7319865 30,16 C30,8.2680135 23.7319865,2 16,2 C8.2680135,2 2,8.2680135 2,16 C2,23.7319865 8.2680135,30 16,30 Z" id="inner-line" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <circle id="gradient-bg" fill="url(#linearGradient-1)" cx="16" cy="16" r="13"></circle>
+        <path d="M23,31 C18.581722,31 15,27.418278 15,23 C15,18.581722 18.581722,15 23,15 C27.418278,15 31,18.581722 31,23 C31,27.418278 27.418278,31 23,31 Z" id="outer-line" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M23,30 C19.1340068,30 16,26.8659932 16,23 C16,19.1340068 19.1340068,16 23,16 C26.8659932,16 30,19.1340068 30,23 C30,26.8659932 26.8659932,30 23,30 Z" id="outer-line" fill="#000000" fill-rule="nonzero"></path>
+        <path d="M23,29 C26.3137085,29 29,26.3137085 29,23 C29,19.6862915 26.3137085,17 23,17 C19.6862915,17 17,19.6862915 17,23 C17,26.3137085 19.6862915,29 23,29 Z" id="inner-line" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <circle id="gradient-bg" fill="url(#linearGradient-1)" cx="23" cy="23" r="5"></circle>
+    </g>
+</svg>

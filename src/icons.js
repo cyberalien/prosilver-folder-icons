@@ -82,7 +82,7 @@
 
         return mix([{
             layer: 'background',
-            icon: ['forum-background']
+            icon: [forumType + '-background', 'forum-background']
         }, {
             layer: 'content',
             icon: [forumType, 'forum']
