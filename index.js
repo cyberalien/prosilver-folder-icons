@@ -43,6 +43,13 @@ tools.ImportDir(sourceDir, {
         }
     });
 
+    // Remove icons that start with "-"
+    keys.forEach(key => {
+        if (key.slice(0, 1) === '-') {
+            collection.remove(key);
+        }
+    });
+
     // Clean up files
     return collection.forEach((svg, key) => tools.SVGO(svg, {
         mergePaths: true,
