@@ -108,7 +108,7 @@
 
         types.push(topicType);
         if (topicType === 'global') {
-            types.push('announcement');
+            types.push('announce');
         }
         if (topicType !== 'topic') {
             types.push('topic');
