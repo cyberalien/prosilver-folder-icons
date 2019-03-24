@@ -141,7 +141,7 @@
             return true;
         }
         generated[icon] = true;
-        Iconify.addIcon(prefix + ':' + icon, generateIcon(icon));
+        Iconify.addIcon(prefix + ':' + icon, generateIcon(icon), true);
 
         return oldIconExists(icon, prefix);
     };
